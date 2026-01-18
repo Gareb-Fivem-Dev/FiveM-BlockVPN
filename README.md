@@ -330,7 +330,7 @@ Check [LICENSE](LICENSE) file for details.
 - Improved permission system
 - Added debug mode toggle
 
-### v1.0.0
+### v1.1.0
 - Initial release
 - VPN detection
 - FiveM authentication
