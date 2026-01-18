@@ -295,7 +295,7 @@ Shows:
 
 ## 📜 License
 
-Check `LICENSE` file for details.
+Check [LICENSE](LICENSE) file for details.
 
 
 ---
