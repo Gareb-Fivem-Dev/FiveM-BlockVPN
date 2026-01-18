@@ -3,9 +3,8 @@
 A comprehensive FiveM resource that detects and blocks VPN/proxy connections while requiring FiveM account authentication. 
 Features intelligent IP caching, database logging, Discord webhooks via qb-logs, and in-game whitelist management.
 
-> **Note:** This resource supports `qb-logs` for both `qb-core` and `qbox_core` </br>
- (when running in qb-core compatibility mode).</br>
- qb-logs included with this resource
+> **Note:** This resource supports `qb-logs` for both `qb-core` and `qbox_core` (when running in qb-core compatibility mode).<br>
+> A compatible `qb-logs` is included with this resource for convenience.
 
 ## 🚀 Features
 
@@ -28,7 +27,7 @@ Features intelligent IP caching, database logging, Discord webhooks via qb-logs,
 3. **Add to server.cfg**:
    ```
    ensure oxmysql
-   ensure qb-logs
+   ensure qb-logs   # Use the included qb-logs or your own compatible version
    ensure vps_blocker
    ```
 4. **Configure** - Edit `config.lua` to customize settings
@@ -199,12 +198,19 @@ When the resource starts, it automatically:
 - No manual file editing required
 
 ### qb-logs Integration
-Configure webhook in your qb-logs config:
+#### qb-logs Setup for Logging
+
+To enable Discord logging, configure your `qb-logs` (included or compatible) with a webhook for VPN Blocker:
+
 ```lua
 ['vpn_blocker'] = 'YOUR_DISCORD_WEBHOOK_URL'
 ```
 
-Logs include:
+**Supported Frameworks:**
+- `qb-core` (standard)
+- `qbox_core` (when using qb-core compatibility mode)
+
+**Logs include:**
 - Player name
 - Denial reason (No FiveM ID / VPN Detected)
 - IP address
@@ -240,9 +246,9 @@ Logs include:
 - Rate limit: 45 requests/minute on free tier (caching reduces usage)
 
 ### Discord logs not working
-- Ensure `qb-logs` is running before `vps_blocker`
-- Add `vpn_blocker` webhook to qb-logs config
-- Set `Config.UseQbxLogs = true`
+- Ensure `qb-logs` is started before `vps_blocker`
+- Add the `vpn_blocker` webhook to your qb-logs config (see above)
+- Set `Config.UseQbxLogs = true` in your config.lua
 
 ### Whitelist not saving
 - Check file permissions on `config.lua`
@@ -348,7 +354,6 @@ Check [LICENSE](LICENSE) file for details.
 
 
 ---
-
 
 ## 🙏 Original Creator
 
