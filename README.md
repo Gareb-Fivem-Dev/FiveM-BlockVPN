@@ -3,7 +3,8 @@
 A comprehensive FiveM resource that detects and blocks VPN/proxy connections while requiring FiveM account authentication. 
 Features intelligent IP caching, database logging, Discord webhooks via qb-logs, and in-game whitelist management.
 
-> **Note:** This resource supports `qb-logs` for both `qb-core` and `qbox_core` (when running in qb-core compatibility mode).<br>
+> **Note:** This resource supports `qb-logs` for both `qb-core` and `qbox_core` <br>
+> (when running in qb-core compatibility mode).<br>
 > A compatible `qb-logs` is included with this resource for convenience.
 
 ## 🚀 Features
