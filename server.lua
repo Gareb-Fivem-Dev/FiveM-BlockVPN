@@ -26,7 +26,7 @@ local adaptiveCard = {
     },
 }
 
--- Function to send logs to qbx-logs
+-- Function to send logs to qb-logs
 local function SendDenialLog(playerName, reason, identifiers, ip)
     if not Config.UseQbxLogs then return end
     
@@ -220,7 +220,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, deferrals)
             print("^1[VPS_BLOCKER]^7 Player rejected: No FiveM identifier found!")
         end
         
-        -- Send log to qbx-logs
+        -- Send log to qb-logs
         Citizen.SetTimeout(100, function()
             SendDenialLog(name, "No FiveM Identifier", identifiers, playerIP)
         end)
@@ -294,7 +294,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, deferrals)
                     print("^1[VPS_BLOCKER]^7 VPN DETECTED! Blocking player...")
                 end
                 
-                -- Send log to qbx-logs asynchronously
+                -- Send log to qb-logs asynchronously
                 Citizen.SetTimeout(100, function()
                     SendDenialLog(name, "VPN/Proxy Detected", identifiers, playerIP)
                 end)

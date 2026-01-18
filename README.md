@@ -1,6 +1,10 @@
 # VPS Blocker - Advanced VPN Detection & FiveM Authentication
 
-A comprehensive FiveM resource that detects and blocks VPN/proxy connections while requiring FiveM account authentication. Features intelligent IP caching, database logging, Discord webhooks via qb-logs, and in-game whitelist management.
+A comprehensive FiveM resource that detects and blocks VPN/proxy connections while requiring FiveM account authentication. 
+Features intelligent IP caching, database logging, Discord webhooks via qb-logs, and in-game whitelist management.
+
+> **Note:** This resource supports `qb-logs` for both `qb-core` and `qbox_core` (when running in qb-core compatibility mode).
+qb-logs included with this resource
 
 ## 🚀 Features
 
@@ -80,9 +84,9 @@ Config.Whitelist = {
 ```
 /vpnwhitelist list
 /vpnwhitelist add 5
-/vpnwhitelist add license2:5b8005b02f7960472f333105ef47a9ff83af88dc
+/vpnwhitelist add license2:
 /vpnwhitelist remove 1
-/vpnwhitelist remove license2:5b8005b02f7960472f333105ef47a9ff83af88dc
+/vpnwhitelist remove license2:
 ```
 
 **Features:**

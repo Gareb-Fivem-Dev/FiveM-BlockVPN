@@ -4,7 +4,7 @@ Config.ServerName = 'server name' -- Name of the server
 
 Config.Debug = false -- Set to true to enable debug messages
 
-Config.UseQbxLogs = true -- Set to true to send logs to qbx-logs
+Config.UseQbxLogs = true -- Set to true to send logs to qb-logs
 
 Config.AdminGroup = 'admin' -- Permission group that can use whitelist commands
 
