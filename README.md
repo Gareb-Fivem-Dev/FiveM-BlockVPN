@@ -361,4 +361,58 @@ Check [LICENSE](LICENSE) file for details.
 
 This project is based on the original work by [CADOJRP](https://github.com/CADOJRP/FiveM-BlockVPN/tree/master). All credit for the initial development and concept goes to them.
 
+# BlockVPN for FiveM v1.0.4
+
+BlockVPN is a simple and effective script for FiveM servers that blocks players using VPNs or proxies from joining your server. It uses the GetIPIntel API to detect VPN/proxy usage and helps keep your community safe from unwanted connections.
+
+## Features
+- Detects and blocks most VPN and proxy connections
+- Customizable kick threshold and reason
+- Caching to reduce API requests
+- Bypass permission for trusted users
+- Easy to configure
+
+## Installation
+1. Download or clone this repository into your FiveM resources folder.
+2. Add `start blockVPN` (or `ensure blockVPN`) to your `server.cfg`.
+3. Make sure your server has internet access to use the GetIPIntel API.
+
+## Configuration
+Open `blockVPN/server.lua` and edit the following settings at the top of the file:
+
+- `ownerEmail`: **(Required)** Your contact email for GetIPIntel API (no account needed, just an email for contact).
+- `kickThreshold`: Probability threshold for blocking (default: 0.99).
+- `kickReason`: Message shown to blocked players.
+- `flags`: API check flags (default: 'm' for blacklist check).
+- `printFailed`: Print blocked attempts to server console (true/false).
+- `cacheTime`: How long (in seconds) to cache IP results (default: 8 hours).
+
+### Example:
+```lua
+local ownerEmail = 'your@email.com'  -- Set this to your email
+local kickThreshold = 0.99           -- Recommended minimum
+local kickReason = 'VPN/Proxy detected. Contact staff if this is a mistake.'
+local flags = 'm'
+local printFailed = true
+local cacheTime = 8 * 3600
+```
+
+## Permissions
+To allow certain players (e.g., staff) to bypass the VPN check, give them the `blockVPN.bypass` ACE permission in your server configuration.
+
+## How It Works
+When a player connects, their IP is checked against the GetIPIntel API. If the probability of VPN/proxy use is above your threshold, they are kicked with your custom message. Results are cached to reduce API calls.
+
+## License
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+
+## Credits
+- Script by original author(s)
+- Uses [GetIPIntel](https://getipintel.net/) for VPN/proxy detection
+
+---
+## Primary Purpose
+Block VPN and proxy connections to your FiveM server.
+
+
 ---
