@@ -1,4 +1,5 @@
-# VPS Blocker - Advanced VPN Detection & FiveM Authentication
+# VPS Blocker 
+# Advanced VPN Detection & FiveM Authentication
 
 A comprehensive FiveM resource that detects and blocks VPN/proxy connections while requiring FiveM account authentication. 
 Features intelligent IP caching, database logging, Discord webhooks via qb-logs, and in-game whitelist management.
