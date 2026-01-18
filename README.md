@@ -340,3 +340,13 @@ Check [LICENSE](LICENSE) file for details.
 - VPN/proxy IPs are always checked via API
 - Whitelist still bypasses ALL checks (fastest option)
 - Database must be properly configured for caching to work
+
+
+---
+
+
+## 🙏 Original Creator
+
+This project is based on the original work by [CADOJRP](https://github.com/CADOJRP/FiveM-BlockVPN/tree/master). All credit for the initial development and concept goes to them.
+
+---
